@@ -24,6 +24,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <!-- 表单 -->
   <h2 style="margin-top:40px;">Send us a Message</h2>
   <form action="https://formspree.io/f/mzdbpboy" method="POST" style="max-width:600px; margin-top:20px;">
+     <input type="hidden" name="_next" value="/thankyou" />
     <label for="company" style="display:block; margin-bottom:5px;">Company Name *</label>
     <input type="text" id="company" name="company" required style="width:100%; padding:8px; margin-bottom:15px;" />
 
