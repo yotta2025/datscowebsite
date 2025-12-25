@@ -16,45 +16,33 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   <!-- 联系方式信息 -->
   <h2>Contact Information</h2>
-  <p><strong>Email:</strong> tzd@datscoresources.com</p>
-  <p><strong>Phone:</strong> +1 (437) 340-2451</p>
-  <p><strong>Address:</strong> Suite 101 2275 Upple Middle Road E Oakville ON, Canada</p>
+  <p><strong>Email:</strong> info@datscoresources.com</p>
+  <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+  <p><strong>Address:</strong> 123 Datsco St, Toronto, ON, Canada</p>
   <p>We aim to respond to all inquiries within one business day.</p>
 
   <!-- 表单 -->
   <h2 style="margin-top:40px;">Send us a Message</h2>
-  <form action="https://formspree.io/f/mzdbpboy" method="POST" style="max-width:600px; margin-top:20px;">
-  <input type="hidden" name="_next" value="/thankyou" />
-  <input type="hidden" name="_subject" value="New inquiry from Datsco Resources website" />
+  <form action="https://formspree.io/f/mnqrbvaw" method="POST" style="max-width:600px; margin-top:20px;">
+    <label for="company" style="display:block; margin-bottom:5px;">Company Name *</label>
+    <input type="text" id="company" name="company" required style="width:100%; padding:8px; margin-bottom:15px;" />
 
-  <label>
-    Company Name
-    <input type="text" name="company" required />
-  </label>
+    <label for="address" style="display:block; margin-bottom:5px;">Address</label>
+    <input type="text" id="address" name="address" style="width:100%; padding:8px; margin-bottom:15px;" />
 
-  <label>
-    Address
-    <input type="text" name="address" />
-  </label>
+    <label for="phone" style="display:block; margin-bottom:5px;">Phone</label>
+    <input type="tel" id="phone" name="phone" style="width:100%; padding:8px; margin-bottom:15px;" />
 
-  <label>
-    Phone
-    <input type="tel" name="phone" />
-  </label>
+    <label for="email" style="display:block; margin-bottom:5px;">Email *</label>
+    <input type="email" id="email" name="_replyto" required style="width:100%; padding:8px; margin-bottom:15px;" />
 
-  <label>
-    Email
-    <input type="email" name="email" required />
-  </label>
+    <label for="comments" style="display:block; margin-bottom:5px;">Comments</label>
+    <textarea id="comments" name="comments" rows="5" style="width:100%; padding:8px; margin-bottom:15px;"></textarea>
 
-  <label>
-    Comments
-    <textarea name="comments" rows="4"></textarea>
-  </label>
-
-
-  <button type="submit">Submit</button>
-</form>
+    <button type="submit" style="padding:10px 20px; background-color:#004080; color:white; border:none; cursor:pointer;">
+      Submit
+    </button>
+  </form>
 
   <p style="margin-top:15px; font-size:0.9rem;">* Required fields</p>
 </BaseLayout>
