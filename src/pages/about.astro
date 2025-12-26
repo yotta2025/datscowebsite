@@ -3,30 +3,80 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="About Us | Datsco Resources Inc">
-  <h1>About Datsco Resources Inc</h1>
 
-  <p>
-    Datsco Resources Inc is a Canada-based trading company specializing in the
-    import and export of chemical products and smart device accessories.
+  <!-- Banner 区域 -->
+<section style="
+  background: linear-gradient(rgba(0,51,102,0.6), rgba(0,51,102,0.6)),
+  url('/images/about-banner.png') center/cover no-repeat;
+  color: white;
+  padding: 90px 20px;
+  text-align: center;
+  margin-bottom: 60px;
+">
+  <h1 style="font-size:2.8rem; margin-bottom:20px;">
+    About Datsco Resources Inc
+  </h1>
+  <p style="font-size:1.2rem; max-width:900px; margin:0 auto;">
+    Connecting global chemical markets through expertise, reliability,
+    and long-term partnerships.
   </p>
+</section>
 
-  <p>
-    We work closely with manufacturers, distributors, and logistics partners to
-    ensure stable supply, consistent quality, and smooth cross-border delivery.
-    Our focus is on building long-term relationships based on trust,
-    transparency, and performance.
-  </p>
+  <!-- 公司介绍 -->
+  <section style="max-width:900px; margin-bottom:50px;">
+    <p>
+      Datsco Resources Inc is a Canada-based international trading company specializing in the
+      import and export of chemical products. With over a decade of combined industry experience,
+      our professional team has been serving customers across multiple markets by delivering
+      reliable sourcing, efficient logistics coordination, and value-added trade solutions.
+    </p>
 
-  <p>
-    By understanding both supplier capabilities and customer requirements, we
-    help bridge gaps between markets and create efficient trade solutions.
-  </p>
+    <p>
+      We work closely with leading manufacturers, distributors, and logistics partners worldwide.
+      Through these long-standing relationships, we help bridge global suppliers and buyers,
+      ensuring consistent quality, regulatory compliance, and stable supply chains.
+    </p>
 
-  <h2>Our Values</h2>
-  <ul>
-    <li>Integrity and clear communication</li>
-    <li>Quality-focused sourcing</li>
-    <li>Reliable execution</li>
-    <li>Long-term partnership mindset</li>
-  </ul>
+    <p>
+      By deeply understanding both supplier capabilities and customer requirements, we are able
+      to provide tailored solutions that go beyond basic trading — creating additional value
+      through technical coordination, flexible packaging, labeling support, and optimized
+      delivery strategies.
+    </p>
+  </section>
+
+  <!-- Mission / Vision -->
+  <section style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:30px; margin-bottom:60px;">
+
+    <div style="padding:25px; border:1px solid #eee; border-radius:8px;">
+      <h2>Our Mission</h2>
+      <p>
+        To connect global chemical markets by providing dependable sourcing, transparent
+        communication, and professional trade execution — helping our partners grow
+        sustainably and confidently.
+      </p>
+    </div>
+
+    <div style="padding:25px; border:1px solid #eee; border-radius:8px;">
+      <h2>Our Vision</h2>
+      <p>
+        To become a trusted international trade partner recognized for integrity,
+        technical understanding, and long-term value creation across global markets.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- 核心优势 / 价值观 -->
+  <section>
+    <h2>Our Values</h2>
+    <ul>
+      <li>Integrity and clear, transparent communication</li>
+      <li>Quality-focused and compliant sourcing</li>
+      <li>Reliable execution across international supply chains</li>
+      <li>Long-term partnership mindset with suppliers and customers</li>
+      <li>Continuous improvement and value-added service orientation</li>
+    </ul>
+  </section>
+
 </BaseLayout>
