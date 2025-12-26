@@ -4,29 +4,102 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout title="Services | Datsco Resources Inc">
   <h1>Our Services</h1>
-
-  <h2>Import & Export Coordination</h2>
   <p>
-    We manage and coordinate international trade processes, helping clients
-    navigate sourcing, documentation, and logistics efficiently.
+    We provide comprehensive trade and supply chain services to support our
+    clients across global markets.
   </p>
 
-  <h2>Supplier Sourcing</h2>
-  <p>
-    Through our established supplier network, we identify reliable manufacturers
-    that match quality, pricing, and delivery requirements.
-  </p>
+  <div class="services-grid">
+    <!-- Import & Export Coordination -->
+    <div class="service-card">
+      <img src="/images/services/import-export.png" alt="Import and Export Coordination" />
+      <h3>Import & Export Coordination</h3>
+      <p>
+        We manage and coordinate international trade processes, helping clients
+        navigate sourcing, documentation, and logistics efficiently.
+      </p>
+    </div>
 
-  <h2>Logistics & Delivery Support</h2>
-  <p>
-    We work with trusted logistics partners to support smooth and timely
-    cross-border delivery.
-  </p>
+    <!-- Supplier Sourcing -->
+    <div class="service-card">
+      <img src="/images/services/supplier-sourcing.png" alt="Supplier Sourcing" />
+      <h3>Supplier Sourcing</h3>
+      <p>
+        Through our established supplier network, we identify reliable
+        manufacturers that meet quality, pricing, and delivery requirements.
+      </p>
+    </div>
 
-  <h2>Customized Trade Solutions</h2>
-  <p>
-    Every client is different. We provide flexible solutions tailored to
-    specific market needs and business goals, which including the customized 
-    package, labelling, and shipment solutions.
-  </p>
+    <!-- Logistics & Delivery Support -->
+    <div class="service-card">
+      <img src="/images/services/logistics.png" alt="Logistics and Delivery Support" />
+      <h3>Logistics & Delivery Support</h3>
+      <p>
+        We work with trusted logistics partners to support smooth and timely
+        cross-border delivery.
+      </p>
+    </div>
+
+    <!-- Customized Trade Solutions -->
+    <div class="service-card">
+      <img src="/images/services/customized-solutions.png" alt="Customized Trade Solutions" />
+      <h3>Customized Trade Solutions</h3>
+      <p>
+        We provide flexible solutions tailored to specific market needs,
+        including customized packaging, labeling, and shipment solutions.
+      </p>
+    </div>
+
+    <!-- Technical Service -->
+    <div class="service-card">
+      <img src="/images/services/technical-service.png" alt="Technical Service and Application Support" />
+      <h3>Technical Service & Application Support</h3>
+      <p>
+        We maintain close collaboration with manufacturers’ technical teams and
+        independent laboratories worldwide, providing application guidance and
+        technical support to optimize product performance.
+      </p>
+    </div>
+  </div>
+
+  <style>
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .service-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 25px;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .service-card img {
+      max-width: 100%;
+      height: 140px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      font-size: 1.2rem;
+      color: #004080;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+  </style>
 </BaseLayout>
