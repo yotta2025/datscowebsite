@@ -1,0 +1,87 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { productCategories } from "../../data/products";
+
+export function getStaticPaths() {
+  return productCategories.map((c) => ({
+    params: { category: c.slug },
+  }));
+}
+
+const { category } = Astro.params;
+const current = productCategories.find((c) => c.slug === category);
+
+if (!current) {
+  return new Response("Not found", { status: 404 });
+}
+---
+
+<BaseLayout title={`${current.title} | Datsco Resources Inc`}>
+  <style>
+    .heroBox {
+      background: #f7f7f7;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .heroBox img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      background: #fff;
+      border-radius: 10px;
+      padding: 12px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+    .item {
+      background: #f7f7f7;
+      padding: 18px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .item h3 {
+      margin: 0 0 8px;
+      color: #004080;
+      font-size: 1.1rem;
+    }
+    .item p {
+      margin: 0 0 12px;
+    }
+  </style>
+
+  <p style="margin:0 0 18px;">
+    <a href="/products" style="color:#004080; text-decoration:underline;">← Back to Products</a>
+  </p>
+
+  <h1 style="text-align:center; margin-bottom:18px;">{current.title}</h1>
+
+  <section class="heroBox">
+    <img src={current.image} alt={current.title} loading="lazy" />
+    <p style="margin:0; flex:1; min-width:240px;">
+      {current.intro}
+    </p>
+  </section>
+
+  <h2>Product List</h2>
+
+  <section class="grid">
+    {current.products.map((p) => (
+      <div class="item">
+        <h3>{p.name}</h3>
+        {p.description && <p>{p.description}</p>}
+        <a href={p.pdf} target="_blank" style="color:#004080; text-decoration:underline;">
+          View Specification (PDF)
+        </a>
+      </div>
+    ))}
+  </section>
+</BaseLayout>

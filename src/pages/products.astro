@@ -1,89 +1,64 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { productCategories } from "../data/products";
 ---
 
 <BaseLayout title="Products | Datsco Resources Inc">
-  <h1 style="text-align:center; margin-bottom:40px;">Our Products</h1>
+  <style>
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      max-width: 1000px; /* 跟 BaseLayout main 一致 */
+      margin: 0 auto;
+    }
+    .card {
+      flex: 1 1 250px;
+      background: #f7f7f7;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+    .card img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+    .card h3 {
+      margin: 0 0 10px;
+      color: #004080;
+    }
+  </style>
 
-  <p style="text-align:center; max-width:800px; margin:0 auto 50px;">
-    We supply a range of chemical products for industrial and commercial use. 
-    Our products serve multiple industries and are sourced from qualified manufacturers 
+  <h1 style="text-align:center; margin-bottom:30px;">Our Products</h1>
+
+  <p style="text-align:center; max-width:800px; margin:0 auto 40px;">
+    We supply a range of chemical products for industrial and commercial use.
+    Our products serve multiple industries and are sourced from qualified manufacturers
     with international standards and customer specifications.
   </p>
 
-  <!-- 产品卡片区域 -->
-  <section style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px; max-width:1200px; margin:0 auto;">
-    
-    <!-- Construction Materials -->
-    <div style="flex:1 1 250px; background:#f7f7f7; padding:20px; text-align:center; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-      <img src="/images/products/construction.png" alt="Construction Materials" style="width:100px; margin-bottom:15px;" />
-      <h3>Construction Materials</h3>
-      <p>Used in cement, concrete, and infrastructure projects.</p>
-      <a href="/products/construction" style="color:#004080; text-decoration:underline;">Learn More</a>
-    </div>
-
-    <!-- Industrial Chemicals & Solvents -->
-    <div style="flex:1 1 250px; background:#f7f7f7; padding:20px; text-align:center; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-      <img src="/images/products/industrial.png" alt="Industrial Chemicals" style="width:100px; margin-bottom:15px;" />
-      <h3>Industrial Chemicals & Solvents</h3>
-      <p>For manufacturing, processing, and surface treatment.</p>
-      <a href="/products/industrial" style="color:#004080; text-decoration:underline;">Learn More</a>
-    </div>
-
-    <!-- Adhesives -->
-    <div style="flex:1 1 250px; background:#f7f7f7; padding:20px; text-align:center; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-      <img src="/images/products/adhesives.png" alt="Adhesives" style="width:100px; margin-bottom:15px;" />
-      <h3>Adhesives</h3>
-      <p>Raw materials for industrial and construction adhesives.</p>
-      <a href="/products/adhesives" style="color:#004080; text-decoration:underline;">Learn More</a>
-    </div>
-
-    <!-- Oil & Gas (Cement Additives) -->
-    <div style="flex:1 1 250px; background:#f7f7f7; padding:20px; text-align:center; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-      <img src="/images/products/oil-gas.png" alt="Oil & Gas" style="width:100px; margin-bottom:15px;" />
-      <h3>Oil & Gas (Cement Additives)</h3>
-      <p>Solutions for upstream and downstream applications.</p>
-      <a href="/products/oil-gas" style="color:#004080; text-decoration:underline;">Learn More</a>
-    </div>
-
-    <!-- Polyurethane -->
-    <div style="flex:1 1 250px; background:#f7f7f7; padding:20px; text-align:center; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-      <img src="/images/products/polyurethane.png" alt="Polyurethane" style="width:100px; margin-bottom:15px;" />
-      <h3>Polyurethane</h3>
-      <p>Raw materials for PU foams, coatings, and elastomers.</p>
-      <a href="/products/polyurethane" style="color:#004080; text-decoration:underline;">Learn More</a>
-    </div>
-
-    <!-- Textile Industry -->
-    <div style="flex:1 1 250px; background:#f7f7f7; padding:20px; text-align:center; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-      <img src="/images/products/textile.png" alt="Textile Industry" style="width:100px; margin-bottom:15px;" />
-      <h3>Textile Industry</h3>
-      <p>Chemical solutions for textile manufacturing and finishing.</p>
-      <a href="/products/textile" style="color:#004080; text-decoration:underline;">Learn More</a>
-    </div>
-
-    <!-- Pharmacy Industry -->
-    <div style="flex:1 1 250px; background:#f7f7f7; padding:20px; text-align:center; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-      <img src="/images/products/pharmacy.png" alt="Pharmacy Industry" style="width:100px; margin-bottom:15px;" />
-      <h3>Pharmacy Industry</h3>
-      <p>High-purity chemicals and intermediates for pharma production.</p>
-      <a href="/products/pharmacy" style="color:#004080; text-decoration:underline;">Learn More</a>
-    </div>
-
-    <!-- Water Treatment Industry -->
-    <div style="flex:1 1 250px; background:#f7f7f7; padding:20px; text-align:center; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-      <img src="/images/products/water.png" alt="Water Treatment Industry" style="width:100px; margin-bottom:15px;" />
-      <h3>Water Treatment Industry</h3>
-      <p>Chemicals and additives for clean water and wastewater treatment.</p>
-      <a href="/products/water" style="color:#004080; text-decoration:underline;">Learn More</a>
-    </div>
-
+  <section class="cards">
+    {productCategories.map((c) => (
+      <div class="card">
+        <img src={c.image} alt={c.title} loading="lazy" />
+        <h3>{c.title}</h3>
+        <p>{c.short}</p>
+        <a href={`/products/${c.slug}`} style="color:#004080; text-decoration:underline;">Learn More</a>
+      </div>
+    ))}
   </section>
 
-  <!-- Full Product List PDF -->
-  <p style="text-align:center; margin-top:50px; font-size:1.1rem;">
-    For a <strong>full product list</strong>, please 
-    <a href="/files/full-product-list.pdf" target="_blank" style="color:#004080; text-decoration:underline;">click here</a>.
+  <p style="text-align:center; margin-top:45px; font-size:1.05rem;">
+    For a <strong>full product list</strong>, please
+    <a href="/files/full-product-list.pdf" target="_blank" style="color:#004080; text-decoration:underline;"> click here</a>.
   </p>
-
 </BaseLayout>
