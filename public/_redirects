@@ -1,2 +1,5 @@
-# 禁用 SPA fallback，交给静态文件系统处理
-/* /404.html 404
+/test.xml /test.xml 200
+/sitemap-index.xml /sitemap-index.xml 200
+/sitemap-0.xml /sitemap-0.xml 200
+/robots.txt /robots.txt 200
+/* /404 404
