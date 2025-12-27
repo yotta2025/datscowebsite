@@ -22,8 +22,10 @@ export const productCategories: ProductCategory[] = [
     intro:
       "Cement additives, admixtures, and related materials to enhance concrete performance for infrastructure and construction projects.",
     products: [
-      { name: "Superplasticizer (PCE)", pdf: "/files/specs/construction/superplasticizer-pce.pdf" },
-      { name: "Retarder", pdf: "/files/specs/construction/retarder.pdf" },
+      { name: "Polyvinyl alcohol (fine power)", pdf: "/files/specs/construction/pva.pdf" },
+      { name: "Polyvinyl alcohol fiber", pdf: "/files/specs/construction/PVA fiber.pdf" },
+      { name: "Redispersible Emulsion Powder", pdf: "/files/specs/construction/emulsion powder.pdf" },
+      { name: " Hydroxypropyl Methylcellulose", pdf: "/files/specs/construction/HPMC.pdf" },
     ],
   },
   {
@@ -46,7 +48,8 @@ export const productCategories: ProductCategory[] = [
     intro:
       "Raw materials and intermediates used in industrial and construction adhesive systems.",
     products: [
-      { name: "Adhesive Resin", pdf: "/files/specs/adhesives/resin.pdf" },
+      { name: "EVA Resin", pdf: "/files/specs/adhesives/EVA.pdf" },
+      { name: "White Emulsion", pdf: "/files/specs/adhesives/Emulsion.pdf" },
     ],
   },
   {
@@ -70,6 +73,9 @@ export const productCategories: ProductCategory[] = [
     products: [
       { name: "Polyol", pdf: "/files/specs/polyurethane/polyol.pdf" },
       { name: "MDI", pdf: "/files/specs/polyurethane/mdi.pdf" },
+      { name: "1,4 Butanediol", pdf: "/files/specs/polyurethane/bdo.pdf" },
+      { name: "Tetrahydrofuran", pdf: "/files/specs/polyurethane/THF.pdf" },
+      { name: "PTMEG", pdf: "/files/specs/polyurethane/PTMEG.pdf" },
     ],
   },
   {
