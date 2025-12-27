@@ -61,6 +61,7 @@ export const productCategories: ProductCategory[] = [
       "Cementing additives and solutions for oil & gas operations and related applications.",
     products: [
       { name: "Defoamer", pdf: "/files/specs/oil-gas/defoamer.pdf" },
+      { name: "Oil Well Cement Additives", pdf: "/files/specs/oil-gas/wellcement.pdf" },
     ],
   },
   {
