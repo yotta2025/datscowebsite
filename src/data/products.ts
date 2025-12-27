@@ -23,8 +23,8 @@ export const productCategories: ProductCategory[] = [
       "Cement additives, admixtures, and related materials to enhance concrete performance for infrastructure and construction projects.",
     products: [
       { name: "Polyvinyl alcohol (fine power)", pdf: "/files/specs/construction/pva.pdf" },
-      { name: "Polyvinyl alcohol fiber", pdf: "/files/specs/construction/PVA fiber.pdf" },
-      { name: "Redispersible Emulsion Powder", pdf: "/files/specs/construction/emulsion powder.pdf" },
+      { name: "Polyvinyl alcohol fiber", pdf: "/files/specs/construction/PVAfiber.pdf" },
+      { name: "Redispersible Emulsion Powder", pdf: "/files/specs/construction/emulsionpowder.pdf" },
       { name: " Hydroxypropyl Methylcellulose", pdf: "/files/specs/construction/HPMC.pdf" },
     ],
   },
