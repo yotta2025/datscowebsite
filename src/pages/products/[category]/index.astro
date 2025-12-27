@@ -1,6 +1,6 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import { productCategories } from "../../data/products";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { productCategories } from "../../../data/products";
 
 export function getStaticPaths() {
   return productCategories.map((c) => ({
@@ -53,9 +53,7 @@ if (!current) {
       color: #004080;
       font-size: 1.1rem;
     }
-    .item p {
-      margin: 0 0 12px;
-    }
+    .item p { margin: 0 0 12px; }
   </style>
 
   <p style="margin:0 0 18px;">
