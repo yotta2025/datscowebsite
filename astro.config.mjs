@@ -3,9 +3,5 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://www.datscoresources.com',
-  integrations: [
-    sitemap({
-      filename: 'sitemap.xml'
-    })
-  ],
+  integrations: [sitemap()],
 });
