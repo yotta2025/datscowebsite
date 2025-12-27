@@ -45,38 +45,75 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </p>
   </section>
 
-  <!-- Mission / Vision -->
-  <section style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:30px; margin-bottom:60px;">
+ <!-- Mission / Vision -->
+<section style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:30px; margin-bottom:60px;">
 
-    <div style="padding:25px; border:1px solid #eee; border-radius:8px;">
-      <h2>Our Mission</h2>
-      <p>
-        To connect global chemical markets by providing dependable sourcing, transparent
-        communication, and professional trade execution — helping our partners grow
-        sustainably and confidently.
-      </p>
+  <!-- Mission Card -->
+  <div style="background:#f7f7f7; padding:26px; border-radius:12px; box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+      <span style="width:44px; height:44px; border-radius:12px; background:#004080; display:grid; place-items:center;">
+        <!-- target icon -->
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M12 22a10 10 0 1 0-10-10" stroke="white" stroke-width="1.8" opacity="0.95"/>
+          <path d="M12 18a6 6 0 1 0-6-6" stroke="white" stroke-width="1.8" opacity="0.95"/>
+          <path d="M12 14a2 2 0 1 0-2-2" stroke="white" stroke-width="1.8" opacity="0.95"/>
+          <path d="M21 3l-7 7" stroke="white" stroke-width="1.8" opacity="0.95"/>
+          <path d="M17 3h4v4" stroke="white" stroke-width="1.8" opacity="0.95"/>
+        </svg>
+      </span>
+      <h2 style="margin:0;">Our Mission</h2>
     </div>
+    <p style="margin:0;">
+      To connect global chemical markets by providing dependable sourcing, transparent
+      communication, and professional trade execution — helping our partners grow
+      sustainably and confidently.
+    </p>
+  </div>
 
-    <div style="padding:25px; border:1px solid #eee; border-radius:8px;">
-      <h2>Our Vision</h2>
-      <p>
-        To become a trusted international trade partner recognized for integrity,
-        technical understanding, and long-term value creation across global markets.
-      </p>
+  <!-- Vision Card -->
+  <div style="background:#f7f7f7; padding:26px; border-radius:12px; box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+      <span style="width:44px; height:44px; border-radius:12px; background:#004080; display:grid; place-items:center;">
+        <!-- globe icon -->
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M12 22a10 10 0 1 0-10-10 10 10 0 0 0 10 10Z" stroke="white" stroke-width="1.8" opacity="0.95"/>
+          <path d="M2 12h20" stroke="white" stroke-width="1.8" opacity="0.95"/>
+          <path d="M12 2c3 3 5 6.5 5 10s-2 7-5 10c-3-3-5-6.5-5-10s2-7 5-10Z" stroke="white" stroke-width="1.8" opacity="0.95"/>
+        </svg>
+      </span>
+      <h2 style="margin:0;">Our Vision</h2>
     </div>
+    <p style="margin:0;">
+      To become a trusted international trade partner recognized for integrity,
+      technical understanding, and long-term value creation across global markets.
+    </p>
+  </div>
 
-  </section>
+</section>
 
   <!-- 核心优势 / 价值观 -->
-  <section>
-    <h2>Our Values</h2>
-    <ul>
-      <li>Integrity and clear, transparent communication</li>
-      <li>Quality-focused and compliant sourcing</li>
-      <li>Reliable execution across international supply chains</li>
-      <li>Long-term partnership mindset with suppliers and customers</li>
-      <li>Continuous improvement and value-added service orientation</li>
-    </ul>
-  </section>
+<section style="margin-bottom:30px;">
+  <h2>Our Values</h2>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px; margin-top:16px;">
+    {[
+      "Integrity and clear, transparent communication",
+      "Quality-focused and compliant sourcing",
+      "Reliable execution across international supply chains",
+      "Long-term partnership mindset with suppliers and customers",
+      "Continuous improvement and value-added service orientation",
+    ].map((text) => (
+      <div style="background:#f7f7f7; padding:16px; border-radius:12px; box-shadow:0 2px 10px rgba(0,0,0,0.06); display:flex; gap:12px; align-items:flex-start;">
+        <span style="width:28px; height:28px; border-radius:10px; background:#004080; display:grid; place-items:center; flex:0 0 auto; margin-top:2px;">
+          <!-- check icon -->
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M20 6 9 17l-5-5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <div style="line-height:1.6;">{text}</div>
+      </div>
+    ))}
+  </div>
+</section>
 
 </BaseLayout>
