@@ -170,82 +170,86 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </section>
 
     <!-- Form -->
-    <section class="card">
-      <h2 style="margin-top:0;">Send us a Message</h2>
+   <section class="card">
+  <h2 style="margin-top:0;">Send us a Message</h2>
 
-      <form
-  action="https://formspree.io/f/mzdbpboy"
-  method="POST"
-  style="margin-top:12px;"
->
-  <!-- 成功后跳转 -->
-  <input 
-    type="hidden" 
-    name="_next" 
-    value="https://www.datscoresources.com/thankyou/" 
-  />
-  <input
-    type="hidden"
-    name="_redirect"
-    value="https://www.datscoresources.com/thankyou/"
-  />
+  <form id="contactForm" style="margin-top:12px;">
+    <label for="company">Company Name <span class="req">*</span></label>
+    <input class="input" type="text" id="company" name="company" required style="margin:6px 0 14px;" />
 
-  <!-- 邮件主题 -->
-  <input
-    type="hidden"
-    name="_subject"
-    value="New inquiry from datscoresources.com"
-  />
+    <label for="address">Address</label>
+    <input class="input" type="text" id="address" name="address" style="margin:6px 0 14px;" />
 
-  <label for="company">Company Name <span class="req">*</span></label>
-  <input
-    class="input"
-    type="text"
-    id="company"
-    name="company"
-    required
-    style="margin:6px 0 14px;"
-  />
+    <label for="phone">Phone</label>
+    <input class="input" type="tel" id="phone" name="phone" style="margin:6px 0 14px;" />
 
-  <label for="address">Address</label>
-  <input
-    class="input"
-    type="text"
-    id="address"
-    name="address"
-    style="margin:6px 0 14px;"
-  />
+    <label for="email">Email <span class="req">*</span></label>
+    <input class="input" type="email" id="email" name="email" required style="margin:6px 0 14px;" />
 
-  <label for="phone">Phone</label>
-  <input
-    class="input"
-    type="tel"
-    id="phone"
-    name="phone"
-    style="margin:6px 0 14px;"
-  />
+    <label for="comments">Comments</label>
+    <textarea id="comments" name="comments" rows="5" style="margin:6px 0 14px;"></textarea>
 
-  <label for="email">Email <span class="req">*</span></label>
-  <input
-    class="input"
-    type="email"
-    id="email"
-    name="_replyto"
-    required
-    style="margin:6px 0 14px;"
-  />
+    <!-- 反垃圾：蜜罐字段（用户看不到，机器人会填） -->
+    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
-  <label for="comments">Comments</label>
-  <textarea
-    id="comments"
-    name="comments"
-    rows="5"
-    style="margin:6px 0 14px;"
-  ></textarea>
+    <button class="btn" type="submit" id="submitBtn">Submit</button>
 
-  <button class="btn" type="submit">Submit</button>
-</form>
+    <p id="formStatus" style="margin-top:12px; font-size:0.95rem; color:#666;"></p>
+  </form>
 
+  <p style="margin-top:12px; font-size:0.9rem; color:#666;">* Required fields</p>
+</section>
+
+<script>
+  const FORM_ENDPOINT = "https://formspree.io/f/mzdbpboy";
+
+  const form = document.getElementById("contactForm");
+  const btn = document.getElementById("submitBtn");
+  const status = document.getElementById("formStatus");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    status.textContent = "";
+    btn.disabled = true;
+    btn.textContent = "Sending...";
+
+    try {
+      const formData = new FormData(form);
+
+      // 可选：自定义邮件标题（Formspree 会用）
+      formData.append("_subject", "New inquiry from datscoresources.com");
+
+      const res = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        body: formData,
+        headers: { "Accept": "application/json" },
+      });
+
+      if (res.ok) {
+        // 成功：跳转到你自己的网站 Thank You 页面
+        window.location.href = "/thankyou/";
+        return;
+      }
+
+      // 失败：尝试解析错误信息
+      let msg = "Submission failed. Please try again later.";
+      try {
+        const data = await res.json();
+        if (data?.errors?.length) {
+          msg = data.errors.map((x) => x.message).join(" ");
+        }
+      } catch (_) {}
+
+      status.textContent = msg;
+    } catch (err) {
+      status.textContent = "Network error. Please check your connection and try again.";
+    } finally {
+      btn.disabled = false;
+      btn.textContent = "Submit";
+    }
+  });
+</script>
       <p style="margin-top:12px; font-size:0.9rem; color:#666;">* Required fields</p>
     </section>
   </div>
