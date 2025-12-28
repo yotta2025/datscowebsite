@@ -9,8 +9,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <p>
     Your message has been successfully submitted. We will review your inquiry and get back to you within one business day.
   </p>
+  <p>
+    You will be redirect to homepage in 5 seconds, thank you.
+  </p>
 
   <p style="margin-top:20px;">
     <a href="/" style="color:#004080; text-decoration:underline;">← Back to Home</a>
   </p>
 </BaseLayout>
+<script>
+  setTimeout(() => {
+    window.location.href = "/";
+  }, 5000);
+</script>
