@@ -173,24 +173,73 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <section class="card">
       <h2 style="margin-top:0;">Send us a Message</h2>
 
-      <form action="https://formspree.io/f/mnqrbvaw" method="POST" style="margin-top:12px;">
-        <label for="company">Company Name <span class="req">*</span></label>
-        <input class="input" type="text" id="company" name="company" required style="margin:6px 0 14px;" />
+      <form
+  action="https://formspree.io/f/mzdbpboy"
+  method="POST"
+  style="margin-top:12px;"
+>
+  <!-- 成功后跳转 -->
+  <input
+    type="hidden"
+    name="_redirect"
+    value="https://www.datscoresources.com/thankyou/"
+  />
 
-        <label for="address">Address</label>
-        <input class="input" type="text" id="address" name="address" style="margin:6px 0 14px;" />
+  <!-- 邮件主题 -->
+  <input
+    type="hidden"
+    name="_subject"
+    value="New inquiry from datscoresources.com"
+  />
 
-        <label for="phone">Phone</label>
-        <input class="input" type="tel" id="phone" name="phone" style="margin:6px 0 14px;" />
+  <label for="company">Company Name <span class="req">*</span></label>
+  <input
+    class="input"
+    type="text"
+    id="company"
+    name="company"
+    required
+    style="margin:6px 0 14px;"
+  />
 
-        <label for="email">Email <span class="req">*</span></label>
-        <input class="input" type="email" id="email" name="_replyto" required style="margin:6px 0 14px;" />
+  <label for="address">Address</label>
+  <input
+    class="input"
+    type="text"
+    id="address"
+    name="address"
+    style="margin:6px 0 14px;"
+  />
 
-        <label for="comments">Comments</label>
-        <textarea id="comments" name="comments" rows="5" style="margin:6px 0 14px;"></textarea>
+  <label for="phone">Phone</label>
+  <input
+    class="input"
+    type="tel"
+    id="phone"
+    name="phone"
+    style="margin:6px 0 14px;"
+  />
 
-        <button class="btn" type="submit">Submit</button>
-      </form>
+  <label for="email">Email <span class="req">*</span></label>
+  <input
+    class="input"
+    type="email"
+    id="email"
+    name="_replyto"
+    required
+    style="margin:6px 0 14px;"
+  />
+
+  <label for="comments">Comments</label>
+  <textarea
+    id="comments"
+    name="comments"
+    rows="5"
+    style="margin:6px 0 14px;"
+  ></textarea>
+
+  <button class="btn" type="submit">Submit</button>
+</form>
 
       <p style="margin-top:12px; font-size:0.9rem; color:#666;">* Required fields</p>
     </section>
