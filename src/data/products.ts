@@ -82,8 +82,8 @@ export const productCategories: ProductCategory[] = [
   {
     slug: "food additive",
     title: "Food Additive",
-    short: "Chemical solutions for food processing and additives ."
-    image: "/images/products/textile.png",
+    short: "Chemical solutions for food processing and additives.",
+    image: "/images/products/food.png",
     intro:
       "Chemical solutions for food processing and additives.",
     products: [
