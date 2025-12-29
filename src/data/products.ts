@@ -87,7 +87,9 @@ export const productCategories: ProductCategory[] = [
     intro:
       "Chemical solutions for food processing and additives.",
     products: [
-      { name: "Softener", pdf: "/files/specs/textile/softener.pdf" },
+      { name: "Sodium Acetate", pdf: "/files/specs/textile/sodiumacetate.pdf" },
+      { name: "Citric Acid", pdf: "/files/specs/textile/citirc.pdf" },
+      { name: "Sodium Diacetate", pdf: "/files/specs/textile/diacetate.pdf" },
     ],
   },
   {
