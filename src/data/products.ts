@@ -80,12 +80,12 @@ export const productCategories: ProductCategory[] = [
     ],
   },
   {
-    slug: "textile",
-    title: "Textile Industry",
-    short: "Chemical solutions for textile manufacturing and finishing.",
+    slug: "food additive",
+    title: "Food Additive",
+    short: "Chemical solutions for food additives and flavour ."
     image: "/images/products/textile.png",
     intro:
-      "Chemical solutions and auxiliaries for textile manufacturing and finishing processes.",
+      "Chemical solutions for food processing and additives.",
     products: [
       { name: "Softener", pdf: "/files/specs/textile/softener.pdf" },
     ],
