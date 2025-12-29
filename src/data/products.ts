@@ -101,6 +101,7 @@ export const productCategories: ProductCategory[] = [
       "High-purity chemicals and intermediates for pharmaceutical production.",
     products: [
       { name: "Intermediate A", pdf: "/files/specs/pharmacy/intermediate-a.pdf" },
+       { name: "Tetrahydrofuran", pdf: "/files/specs/pharmacy/THF.pdf" },
     ],
   },
   {
