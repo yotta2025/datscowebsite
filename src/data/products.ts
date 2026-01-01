@@ -36,6 +36,9 @@ export const productCategories: ProductCategory[] = [
     intro:
       "Industrial chemicals and solvents for processing, cleaning, and surface treatment applications.",
     products: [
+      { name: "VAM (Vinyl Acetate Monomer)", pdf: "/files/specs/industrial/vam.pdf" },
+      { name: "Ethyl Acetate (Ethyl Acetate)", pdf: "/files/specs/industrial/eacetate.pdf" },
+      { name: "Methyl Acetate (Ethyl Acetate)", pdf: "/files/specs/industrial/emcetate.pdf" },
       { name: "IPA (Isopropyl Alcohol)", pdf: "/files/specs/industrial/ipa.pdf" },
       { name: "MEK", pdf: "/files/specs/industrial/mek.pdf" },
     ],
@@ -100,7 +103,7 @@ export const productCategories: ProductCategory[] = [
     intro:
       "High-purity chemicals and intermediates for pharmaceutical production.",
     products: [
-      { name: "Intermediate A", pdf: "/files/specs/pharmacy/intermediate-a.pdf" },
+      
        { name: "Tetrahydrofuran", pdf: "/files/specs/pharmacy/THF.pdf" },
     ],
   },
