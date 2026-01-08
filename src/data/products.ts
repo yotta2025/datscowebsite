@@ -39,8 +39,7 @@ export const productCategories: ProductCategory[] = [
       { name: "VAM (Vinyl Acetate Monomer)", pdf: "/files/specs/industrial/vam.pdf" },
       { name: "Ethyl Acetate (Ethyl Acetate)", pdf: "/files/specs/industrial/eacetate.pdf" },
       { name: "Methyl Acetate (Ethyl Acetate)", pdf: "/files/specs/industrial/emcetate.pdf" },
-      { name: "IPA (Isopropyl Alcohol)", pdf: "/files/specs/industrial/ipa.pdf" },
-      { name: "MEK", pdf: "/files/specs/industrial/mek.pdf" },
+
     ],
   },
   {
