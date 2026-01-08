@@ -63,7 +63,7 @@ export const productCategories: ProductCategory[] = [
     intro:
       "Cementing additives and solutions for oil & gas operations and related applications.",
     products: [
-      { name: "Defoamer", pdf: "/files/specs/oil-gas/defoamer.pdf" },
+      { name: "Sodium Metasilicate Anhydrous", pdf: "/files/specs/oil-gas/smatds.pdf" },
       { name: "Oil Well Cement Additives", pdf: "/files/specs/oil-gas/wellcement.pdf" },
     ],
   },
