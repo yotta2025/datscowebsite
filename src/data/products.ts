@@ -90,7 +90,6 @@ export const productCategories: ProductCategory[] = [
       "Chemical solutions for food processing and additives.",
     products: [
       { name: "Sodium Acetate", pdf: "/files/specs/food/sodiumacetate.pdf" },
-      { name: "Citric Acid", pdf: "/files/specs/food/citirc.pdf" },
       { name: "Sodium Diacetate", pdf: "/files/specs/food/diacetate.pdf" },
     ],
   },
